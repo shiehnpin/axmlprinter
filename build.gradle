@@ -16,11 +16,16 @@ buildscript {
     dependencies {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
     }
+
 }
+
 
 allprojects {
     tasks.withType(JavaCompile) {
         options.compilerArgs << "-Xlint:unchecked"
+        sourceCompatibility = 1.7
+        targetCompatibility = 1.7
+
     }
 }
 
